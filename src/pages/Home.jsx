@@ -53,7 +53,7 @@ ease-in-out font-semibold cursor-pointer border-1 border-[#fff] ml-8 px-4 py-2 h
                 Get the book that fits you with our
                 <br /> recommendation system
               </p>
-              <button className=" mt-5 rounded-full cursor-pointer hover:bg-[#f8d261] bg-[#f7d87c] w-40 px-6 transform active:scale-110 transition duration-300 ease-in-out   py-3 text-white">
+              <button className=" mt-5 rounded-full cursor-pointer hover:bg-[#f8d261] bg-[#f7d87c] w-40 px-6 transform active:scale-110 transition duration-300 ease-in-out text-lg   py-3 text-white">
                 Get started
               </button>
             </div>

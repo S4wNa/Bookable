@@ -10,7 +10,7 @@ function HamburgerMenu() {
           toggleMenu();
           toggleMobileMenu();
         }}
-        className="flex flex-col cursor-pointer z-50"
+        className="flex flex-col cursor-pointer "
       >
         <span
           className={`h-0.5 w-8 bg-white mb-2 transform transition duration-300 ease-in-out ${

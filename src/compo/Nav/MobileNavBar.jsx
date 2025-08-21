@@ -3,7 +3,7 @@ import HamburgerMenu from "./HamburgerMenu";
 function MobileNavBar() {
   return (
     <div className="flex flex-col">
-      <div className="mx-8 sm:hidden justify-between items-center mt-12 flex">
+      <div className="mx-16 sm:hidden justify-between items-center mt-12 flex">
         <h1 className="text-3xl text-white font-fast cursor-pointer">
           Bookable
         </h1>
