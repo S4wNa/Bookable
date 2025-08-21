@@ -9,37 +9,41 @@ import HamburgerMenu from "../compo/Nav/HamburgerMenu";
 import FallingNav from "../compo/Nav/FallingNav";
 
 import books from "../assets/books_images.png";
+import { useAuth } from "../context/AuthContextProvider";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 function Home() {
+  const { session } = useAuth();
   return (
     <div className="overflow-hidden font-open w-full h-screen flex justify-center items-center">
       <div className="back -z-1" />
 
       <div className="container mx-8 w-full h-full ">
         <div>
-          <div className=" justify-between items-center mt-12 hidden sm:flex">
-            <h1 className="text-3xl text-white font-fast cursor-pointer">
-              Bookable
-            </h1>
-            <div className="flex items-center justify-center   ">
-              <button
-                className="text-white font-semibold transform
+          {!session && (
+            <div className=" justify-between items-center mt-12 hidden sm:flex">
+              <h1 className="text-3xl text-white font-fast cursor-pointer">
+                Bookable
+              </h1>
+              <div className="flex items-center justify-center   ">
+                <button
+                  className="text-white font-semibold transform
 transition duration-300
 ease-in-out  cursor-pointer hover:text-[#DF98C7]"
-              >
-                Login
-              </button>
-              <button
-                className="text-white transform
+                >
+                  Login
+                </button>
+                <button
+                  className="text-white transform
 transition duration-300
 ease-in-out font-semibold cursor-pointer border-1 border-[#fff] ml-8 px-4 py-2 hover:bg-[#DF98C7] "
-              >
-                Sign up
-              </button>
+                >
+                  Sign up
+                </button>
+              </div>
             </div>
-          </div>
+          )}
           <div className="hidden sm:flex mt-20">
             <div className="w-1/2  flex flex-col justify-center ">
               <h1 className="text-white text-7xl">
@@ -66,16 +70,20 @@ ease-in-out font-semibold cursor-pointer border-1 border-[#fff] ml-8 px-4 py-2 h
             </div>
           </div>
         </div>
-        <div className="mx-8 sm:hidden justify-between items-center mt-12 flex">
-          <h1 className="text-3xl text-white font-fast cursor-pointer">
-            Bookable
-          </h1>
-          <HamburgerMenu />
-        </div>
+        {!session && (
+          <div className="mx-8 sm:hidden justify-between items-center mt-12 flex">
+            <h1 className="text-3xl text-white font-fast cursor-pointer">
+              Bookable
+            </h1>
+            <HamburgerMenu />
+          </div>
+        )}
       </div>
-      <FallingNav className="sm:hidden block ">
-        <MobileNavBar />
-      </FallingNav>
+      {!session && (
+        <FallingNav className="sm:hidden block ">
+          <MobileNavBar />
+        </FallingNav>
+      )}
     </div>
   );
 }

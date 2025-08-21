@@ -29,12 +29,12 @@ function Login() {
     null
   );
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="w-full h-screen flex justify-center items-center ">
       <div className="back -z-1" />
 
       <form
         action={submitAction}
-        className="form shadow w-85 h-120 md:w-120 md:h-120  lg:w-140 lg:h-140 pl-8   rounded-lg md:pl-10 lg:pl-18   "
+        className="form shadow w-85 h-120 md:w-120 md:h-120  lg:w-140 lg:h-140 pl-8   rounded-lg md:pl-10 lg:pl-18 z-10  "
       >
         <h1 className="text-4xl text-white mb-8 mt-16">Login</h1>
         <div className="flex flex-col justify-center   max-w-70 sm:max-w-100">
