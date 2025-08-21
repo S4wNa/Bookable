@@ -6,16 +6,6 @@ import MainLibrary from "./pages/MainLibrary";
 import "./index.css";
 import Home from "./pages/Home";
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
-
-  function handleOpen() {
-    setIsOpen((set) => !set);
-  }
-  function handleMobileOpen() {
-    setIsMobileOpen((setMobile) => !setMobile);
-  }
-
   return (
     <>
       <Routes>
