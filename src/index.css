@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-open: "Open-Sans", sans-serif;
+  --font-fast: "Fasthand", sans-serif;
+}
+
+.pink {
+  background: linear-gradient(to right, #e0b6d1, #a9b8df);
+}
+.back {
+  position: fixed;
+  inset: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: hsla(212, 82%, 81%, 1);
+  background-image: radial-gradient(
+      at 17% 41%,
+      hsla(224, 34%, 89%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 28% 2%, hsla(44, 89%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 70% 79%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 91%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 69% 0%, hsla(236, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 73% 50%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 56% 53%, hsla(212, 82%, 81%, 1) 0px, transparent 50%),
+    url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgNDAwIDQwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZUZpbHRlcic+CiAgICA8ZmVUdXJidWxlbmNlIAogICAgICB0eXBlPSdmcmFjdGFsTm9pc2UnIAogICAgICBiYXNlRnJlcXVlbmN5PSc1LjU1JyAKICAgICAgbnVtT2N0YXZlcz0nMycgCiAgICAgIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KICA8L2ZpbHRlcj4KICAKICA8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjbm9pc2VGaWx0ZXIpJy8+Cjwvc3ZnPg==");
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.inp {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search {
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+}
