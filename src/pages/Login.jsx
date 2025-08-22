@@ -2,10 +2,10 @@ import React, { useActionState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import useToggleStore from "../stores/useToggleStore";
 import { useAuth } from "../context/AuthContextProvider";
-import { Link } from "react-router-dom";
-import HamburgerMenu from "../compo/Nav/HamburgerMenu";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const { signInUser } = useAuth();
   const { showPassord, togglePassword } = useToggleStore();
   const [error, submitAction, isPending] = useActionState(
@@ -22,6 +22,7 @@ function Login() {
         return new Error(signInError);
       }
       if (success && data?.session) {
+        navigate("/mainlibrary");
         return null;
       }
       return null;
@@ -29,7 +30,7 @@ function Login() {
     null
   );
   return (
-    <div className="w-full h-screen flex justify-center items-center ">
+    <div className=" mt-20 w-full h-full flex justify-center items-center ">
       <div className="back -z-1" />
 
       <form

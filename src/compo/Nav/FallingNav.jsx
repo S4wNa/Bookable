@@ -28,7 +28,7 @@ function FallingNav({ children }) {
   return (
     <div
       ref={fallingNav}
-      className="bg-red-100 fixed inset-0 z-50"
+      className="pink fixed inset-0 z-50"
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       }}

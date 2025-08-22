@@ -2,10 +2,11 @@ import React, { useActionState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import useToggleStore from "../stores/useToggleStore";
 import { useAuth } from "../context/AuthContextProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
-  const { signUpNewUser } = useAuth();
+  const navigate = useNavigate();
+  const { signUpNewUser, session } = useAuth();
   const { showPassord, togglePassword } = useToggleStore();
   const [error, submitAction, isPending] = useActionState(
     async (prev, formData) => {
@@ -21,6 +22,7 @@ function SignUp() {
         return new Error(signInError);
       }
       if (success && data?.session) {
+        navigate("/mainlibrary");
         return null;
       }
       return null;
@@ -28,8 +30,8 @@ function SignUp() {
     null
   );
   return (
-    <div className="w-full h-screen flex justify-center items-center ">
-      <div className="back -z-1" />
+    <div className=" mt-20 w-full h-full flex justify-center items-center ">
+      <div className="back -z-1 " />
 
       <form
         action={submitAction}

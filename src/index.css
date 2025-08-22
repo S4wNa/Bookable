@@ -5,9 +5,15 @@
   --font-open: "Open-Sans", sans-serif;
   --font-fast: "Fasthand", sans-serif;
 }
+
+.pink {
+  background: linear-gradient(to right, #e0b6d1, #a9b8df);
+}
 .back {
-  position: absolute;
-  inset: 0 0 0 0;
+  position: fixed;
+  inset: 0;
+  min-height: 100vh;
+  width: 100vw;
   background-color: hsla(212, 82%, 81%, 1);
   background-image: radial-gradient(
       at 17% 41%,
@@ -25,7 +31,6 @@
 
 .form {
   display: flex;
-
   flex-direction: column;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.2);
@@ -36,4 +41,17 @@
 .inp {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search {
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-btn {
+  background-color: rgba(255, 255, 255, 0.2);
 }
