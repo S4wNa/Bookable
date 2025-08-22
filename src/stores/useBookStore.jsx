@@ -248,6 +248,25 @@ const useBookStore = create((set) => ({
       set({ error: error.message, loading: false });
     }
   },
+  searchBooks: async (query) => {
+    if (!query || query.trim().length < 2) {
+      return { data: [], error: null };
+    }
+
+    try {
+      const { data, error } = await supabase
+        .from("books")
+        .select("id, title, author, isbn")
+        .or(
+          `title.ilike.%${query}%,author.ilike.%${query}%,isbn.ilike.%${query}%`
+        )
+        .limit(5); // Limiter à 5 résultats
+
+      return { data: data || [], error };
+    } catch (error) {
+      return { data: [], error: error.message };
+    }
+  },
 }));
 
 export default useBookStore;
